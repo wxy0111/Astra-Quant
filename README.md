@@ -193,6 +193,18 @@ On the current test files, the `quality_label` threshold `0.50` version produced
 `2026-02-14` to `2026-04-15` OOS set, with higher drawdown than the conservative
 meta versions.
 
+Promote a newly trained live model only after validation gates pass:
+
+```powershell
+.\train_and_promote_model.bat
+```
+
+This downloads fresh universe data, rebuilds an Agent-market meta dataset,
+trains a candidate `quality_label` LightGBM model, validates it on the recent
+60-day set and the saved OOS set, then replaces `backtest\models\meta_model_live.json`
+only if the return/drawdown gates pass. The previous live model is backed up as
+`meta_model_live.backup_*.json`.
+
 Train and apply the future-regime model:
 
 ```powershell

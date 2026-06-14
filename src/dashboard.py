@@ -31,7 +31,7 @@ ROOT_DIR = Path(__file__).resolve().parents[1]
 REPORT_DIR = ROOT_DIR / "backtest" / "reports"
 LOG_DIR = ROOT_DIR / "logs"
 LIVE_LOG_PATH = LOG_DIR / "live_orders.jsonl"
-DEFAULT_META_MODEL = ROOT_DIR / "backtest" / "models" / "meta_model_lgbm_2y_until_20260415_agent_quality_t050.json"
+DEFAULT_META_MODEL = ROOT_DIR / "backtest" / "models" / "meta_model_live.json"
 
 
 def _read_json(path: Path) -> dict[str, Any]:
@@ -424,7 +424,7 @@ def config_snapshot() -> dict[str, Any]:
         "live_max_margin_usdt": config.LIVE_DEFAULT_MAX_MARGIN_USDT,
         "live_max_notional_usdt": config.LIVE_DEFAULT_MAX_NOTIONAL_USDT,
         "live_max_leverage": config.LIVE_DEFAULT_MAX_LEVERAGE,
-        "meta_model": "meta_model_lgbm_2y_until_20260415_agent_quality_t050.json",
+        "meta_model": "meta_model_live.json",
     }
 
 

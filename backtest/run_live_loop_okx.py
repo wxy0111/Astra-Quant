@@ -26,7 +26,7 @@ from src.regime_model import load_regime_model
 from src.universe_engine import listed_universe
 
 
-DEFAULT_META_MODEL = "backtest/models/meta_model_lgbm_2y_until_20260415_agent_quality_t050.json"
+DEFAULT_META_MODEL = "backtest/models/meta_model_live.json"
 DEFAULT_CLOUDFLARED = r"C:\Program Files (x86)\cloudflared\cloudflared.exe"
 
 

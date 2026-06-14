@@ -29,7 +29,7 @@ from src.okx_client import (
 from src.regime_model import load_regime_model
 
 
-DEFAULT_META_MODEL = "backtest/models/meta_model_lgbm_2y_until_20260415_agent_quality_t050.json"
+DEFAULT_META_MODEL = "backtest/models/meta_model_live.json"
 
 
 def _json_safe(value: Any) -> Any:
