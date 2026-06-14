@@ -1,0 +1,13 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+*.log
+logs/
+backtest/data/
+backtest/data_train_2y/
+backtest/data_oos_*/
+backtest/datasets/
+backtest/reports/
+.idea/
+.vscode/
